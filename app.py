@@ -1,4 +1,7 @@
 import os
+from os import path
+if path.exists("env.py"):
+    import env
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -6,7 +9,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 #Link the database into PyMongo
-mongopass = os.environ.get('MDBPASS')
+mongopass = os.environ.get('MNGPASS')
 
 app.config["MONGO_DBNAME"] = 'cook_book'
 app.config["MONGO_URI"] = 'mongodb+srv://dbDAN:'+mongopass+'@mycookbook-ri5xc.mongodb.net/cook_book?retryWrites=true&w=majority'
