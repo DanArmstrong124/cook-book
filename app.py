@@ -1,16 +1,16 @@
 import os
-from os import path
-if path.exists("env.py"):
-    import env
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from os import path
+if path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
 
 #Link the database into PyMongo
-mongo_db_name = os.environ.get('MNGDB_NAME')
-mongo_db_pass = os.environ.get('MNGDB_PASS')
+mongo_db_name = os.environ.get("MNGDB_NAME")
+mongo_db_pass = os.environ.get("MNGDB_PASS")
 
 app.config["MONGO_DBNAME"] = mongo_db_name
 app.config["MONGO_URI"] = mongo_db_pass
