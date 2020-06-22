@@ -1,1 +1,2 @@
-export MDBPASS='Z43XY2'
+MDBPASS='Z43XY2'
+export MDBPASS
