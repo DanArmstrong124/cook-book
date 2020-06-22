@@ -9,10 +9,11 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 #Link the database into PyMongo
-mongopass = os.environ.get('MNGPASS')
+mongo_db_name = os.environ.get('MNGDB_NAME')
+mongo_db_pass = os.environ.get('MNGDB_PASS')
 
-app.config["MONGO_DBNAME"] = 'cook_book'
-app.config["MONGO_URI"] = 'mongodb+srv://dbDAN:'+mongopass+'@mycookbook-ri5xc.mongodb.net/cook_book?retryWrites=true&w=majority'
+app.config["MONGO_DBNAME"] = mongo_db_name
+app.config["MONGO_URI"] = mongo_db_pass
 
 mongo = PyMongo(app)
 
