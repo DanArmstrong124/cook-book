@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for meal in meals %}
+            {{meal.meal_name}}
+            {{meal.category_name}}
+            {{meal.meal_description}}
+            {{meal.meal_time}}
+            {{meal.meal_ingredients}}
+            {{meal.meal_instructions}}
+            {{meal.meal_tips}}
+        {% endfor %}
+    </body>
+</html>
