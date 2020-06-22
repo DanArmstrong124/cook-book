@@ -9,8 +9,8 @@ if path.exists("env.py"):
 app = Flask(__name__)
 
 #Link the database into PyMongo
-mongo_db_name = os.environ.get("MNGDB_NAME")
-mongo_db_pass = os.environ.get("MNGDB_PASS")
+mongo_db_name = os.environ.get('MNGDB_NAME')
+mongo_db_pass = os.environ.get('MNGDB_PASS')
 
 app.config["MONGO_DBNAME"] = mongo_db_name
 app.config["MONGO_URI"] = mongo_db_pass
