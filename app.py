@@ -35,7 +35,28 @@ def insert_meal():
 def edit_meal(meal_id):
     the_meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
     all_categories = mongo.db.categories.find()
-    return render_template('editmeal.html'. meal=the_meal, categories=all_categories)
+    return render_template('editmeal.html', meal=the_meal, categories=all_categories)
+
+
+@app.route('/update_meal/<meal_id>', methods=["POST"])
+def update_meal(meal_id):
+    meals = mongo.db.meals
+    meals.update(  {'_id': ObjectId(meal_id)},
+    {
+        'meal_name':request.form.get['meal_name'],
+        'category_name':request.form.get['category_name'],
+        'meal_description':request.form.get['meal_description'],
+        'meal_time':request.form.get['meal_time'],
+        'meal_ingredients':request.form.get['meal_ingredients'],
+        'meal_instructions':request.form.get['meal_instructions'],
+        'meal_tips':request.form.get['meal_tips']
+    })
+    return redirect(url_for('get_meals'))
+
+@app.route('/delete_meal/<meal_id>')
+def delete_meal(meal_id):
+    mongo.db.meals.remove({'_id': ObjectId(meal_id)})
+    return redirect(url_for('get_meals'))
 
 
 if __name__ == '__main__':
