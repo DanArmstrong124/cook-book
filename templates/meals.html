@@ -1,13 +1,17 @@
 {% extends 'main.html' %}
 {% block content %}
-        {% for meal in meals %}
-        {{meal.meal_name}}
-        {{meal.category_name}}
-        {{meal.meal_description}}
-        {{meal.meal_time}}
-        {{meal.meal_ingredients}}
-        {{meal.meal_instructions}}
-        {{meal.meal_tips}}
-        {% endfor %}
+
+
+<ul class="collapsible">
+    {% for meal in meals %}
+    <li>
+      <div class="collapsible-header"><i class="material-icons">stars</i>
+      <strong>{{meal.meal_name}} - {{meal.category_name}}</strong></div>
+      <div class="collapsible-body"><span>
+      {{meal.meal_description}} <br><br>
+      <a class="waves-effect waves-light btn"><i class="material-icons left">restaurant_menu</i>COOK ME</a></span></div>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
