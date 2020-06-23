@@ -1,7 +1,9 @@
 {% extends 'main.html' %}
 {% block content %}
 
-
+<div class="row">
+<div class="col s2 advert">ADVERT</div>
+<div class="col s8">
 <ul class="collapsible">
     {% for meal in meals %}
     <li>
@@ -9,9 +11,15 @@
       <strong>{{meal.meal_name}} - {{meal.category_name}}</strong></div>
       <div class="collapsible-body"><span>
       {{meal.meal_description}} <br><br>
-      <a class="waves-effect waves-light btn"><i class="material-icons left">restaurant_menu</i>COOK ME</a></span></div>
+      <a class="waves-effect waves-light btn"><i class="material-icons left">restaurant_menu</i>MAKE ME</a>
+      <a href="{{url_for('edit_meal meal_id=meal._id')}}" class="waves-effect waves-light yellow darken-3 btn"><i class="material-icons center">create</i></a>
+      <a class="waves-effect waves-light red darken-1 btn"><i class="material-icons center">delete</i></a>
+      </span></div>
     </li>
     {% endfor %}
 </ul>
+</div>
+<div class="col s2 advert">ADVERT</div>
+</div>
 
 {% endblock %}

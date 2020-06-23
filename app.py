@@ -28,9 +28,14 @@ def add_meals():
 @app.route('/insert_meal', methods=['POST'])
 def insert_meal():
     meals = mongo.db.meals
-    meals.insert_one(request.form)
+    meals.insert_one(request.form.to_dict())
+    return redirect(url_for('get_meals'))
 
-
+@app.route('/edit_meal/<meal_id>')
+def edit_meal(meal_id):
+    the_meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('editmeal.html'. meal=the_meal, categories=all_categories)
 
 
 if __name__ == '__main__':
