@@ -1,19 +1,32 @@
 {% extends 'main.html' %} {% block content %}
 
+
 <h3>Edit your yummy meal!</h3>
 
 <div class="row">
     <form action="{{ url_for('insert_meal') }}" method="POST" class="col s12">
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s3">
           <i class="material-icons prefix">menu_book</i>
           <input id="meal_name" name="meal_name" type="text" class="validate" value="{{meal.meal_name}}">
           <label for="meal_name">Meal Name</label>
         </div>
+        <div class="col s3">
+            <select id="b-d" style="margin-top: 16px; background-color: transparent; border-bottom: 1px solid #9e9e9e;" class="browser-default browser-default-fix" name="category_name" id="category_name">
+            <option value=" " disabled selected>Choose Category</option>
+            {% for cat in categories %}
+                {% if cat.category_name == meal.category_name %}
+                <option value="{{cat.category_name}}" selected>{{cat.category_name}}</option>
+                {% else %}
+                <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                {% endif %}
+            {% endfor %}
+            </select>
+        </div>
         <div class="input-field col s3">
           <i class="material-icons prefix">fireplace</i>
-          <input id="category_name" name="category_name" type="text" class="validate" value="{{meal.category_name}}">
-          <label for="category_name">Temperature</label>
+          <input id="meal_temp" name="meal_temp" type="text" class="validate" value="{{meal.meal_temp}}">
+          <label for="meal_temp">Temperature</label>
         </div>
         <div class="input-field col s3">
           <i class="material-icons prefix">watch_later</i>

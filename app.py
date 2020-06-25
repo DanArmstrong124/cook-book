@@ -49,7 +49,8 @@ def update_meal(meal_id):
         'meal_time':request.form.get['meal_time'],
         'meal_ingredients':request.form.get['meal_ingredients'],
         'meal_instructions':request.form.get['meal_instructions'],
-        'meal_tips':request.form.get['meal_tips']
+        'meal_tips':request.form.get['meal_tips'],
+        'meal_temp':request.form.get['meal_temp']
     })
     return redirect(url_for('get_meals'))
 
