@@ -20,6 +20,12 @@ mongo = PyMongo(app)
 def get_meals():
     return render_template("meals.html", meals=mongo.db.meals.find())
 
+@app.route('/view_meal/<meal_id>')
+def view_meal(meal_id):
+    the_meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('viewmeal.html', meal=the_meal, categories=all_categories)
+
 @app.route('/add_meals')
 def add_meals():
     return render_template("addmeal.html",

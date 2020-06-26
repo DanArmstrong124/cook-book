@@ -3,6 +3,6 @@ body{
     
 }
 
-select{
-    background-color:green !important;
+.hidden{
+    display: none !important;
 }
