@@ -61,6 +61,12 @@ def update_meal(meal_id):
     return redirect(url_for('get_meals'))
 
 @app.route('/meal/delete/<meal_id>')
+def delete_confirm(meal_id):
+    the_meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('delete.html', meal=the_meal, categories=all_categories)
+
+@app.route('/delete_meal/<meal_id>')
 def delete_meal(meal_id):
     mongo.db.meals.remove({'_id': ObjectId(meal_id)})
     return redirect(url_for('get_meals'))
