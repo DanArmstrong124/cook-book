@@ -85,9 +85,9 @@ def sort_by_british():
 def sort_by_italian():
     return render_template('italian.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_deserts')
-def sort_by_deserts():
-    return render_template('deserts.html', meals=mongo.db.meals.find())
+@app.route('/sort_by_desserts')
+def sort_by_desserts():
+    return render_template('desserts.html', meals=mongo.db.meals.find())
 
 @app.route('/sort_by_middle_eastern')
 def sort_by_middle_eastern():
