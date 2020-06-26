@@ -16,35 +16,35 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_meals')
+@app.route('/meals')
 def get_meals():
     return render_template("meals.html", meals=mongo.db.meals.find())
 
-@app.route('/view_meal/<meal_id>')
+@app.route('/meal/view/<meal_id>')
 def view_meal(meal_id):
     the_meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
     all_categories = mongo.db.categories.find()
     return render_template('viewmeal.html', meal=the_meal, categories=all_categories)
 
-@app.route('/add_meals')
+@app.route('/meal/add')
 def add_meals():
     return render_template("addmeal.html",
     categories=mongo.db.categories.find())
 
-@app.route('/insert_meal', methods=['POST'])
+@app.route('/meal/insert', methods=['POST'])
 def insert_meal():
     meals = mongo.db.meals
     meals.insert_one(request.form.to_dict())
     return redirect(url_for('get_meals'))
 
-@app.route('/edit_meal/<meal_id>')
+@app.route('/meal/edit/<meal_id>')
 def edit_meal(meal_id):
     the_meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
     all_categories = mongo.db.categories.find()
     return render_template('editmeal.html', meal=the_meal, categories=all_categories)
 
 
-@app.route('/update_meal/<meal_id>', methods=["POST"])
+@app.route('/meal/update/<meal_id>', methods=["POST"])
 def update_meal(meal_id):
     meals = mongo.db.meals
     meals.update(  {'_id': ObjectId(meal_id)},
@@ -60,20 +60,20 @@ def update_meal(meal_id):
     })
     return redirect(url_for('get_meals'))
 
-@app.route('/delete_meal/<meal_id>')
+@app.route('/meal/delete/<meal_id>')
 def delete_meal(meal_id):
     mongo.db.meals.remove({'_id': ObjectId(meal_id)})
     return redirect(url_for('get_meals'))
 
-@app.route('/sort_by_indian')
+@app.route('/filter/indian')
 def sort_by_indian():
     return render_template('indian.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_american')
+@app.route('/filter/american')
 def sort_by_american():
     return render_template('american.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_asian')
+@app.route('/filter/asian')
 def sort_by_asian():
     return render_template('asian.html', meals=mongo.db.meals.find())
 
@@ -81,23 +81,23 @@ def sort_by_asian():
 def sort_by_british():
     return render_template('british.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_italian')
+@app.route('/filter/italian')
 def sort_by_italian():
     return render_template('italian.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_desserts')
+@app.route('/filter/desserts')
 def sort_by_desserts():
     return render_template('desserts.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_middle_eastern')
+@app.route('/filter/middle-eastern')
 def sort_by_middle_eastern():
     return render_template('middle-eastern.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_french')
+@app.route('/filter/french')
 def sort_by_french():
     return render_template('french.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_african')
+@app.route('/filter/african')
 def sort_by_african():
     return render_template('african.html', meals=mongo.db.meals.find())
 
