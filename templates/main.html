@@ -27,8 +27,29 @@
                 </div>
             </nav>
         </header>
+
+        
         {% block content %}
         {% endblock %}
+
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col s12 center">
+                    <a href="https://www.argos.co.uk/search/utensil/?clickOrigin=searchbar:home:term:utensil" target="_blank"><img src={{url_for('static', filename='images/leaderboardad.png')}}></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 Dan's Delicious Dishes - Your Online Recipes
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+
+
         <script src="{{url_for('static', filename='/js/script.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>

@@ -1,29 +1,47 @@
 {% extends 'main.html' %}
 {% block content %}
-
 <div class="row">
-<div class="col s2 advert">ADVERT</div>
-<div class="col s8">
+    <div class="col s12 homeheader center">
+        HOME HEADER
+    </div>
+</div>
+<div class="row">
+        <div class="col s3 center advert">
+            <a href="https://www.argos.co.uk/search/spoon/?clickOrigin=searchbar:home:term:spoon" target="_blank"><img src={{url_for('static', filename='images/skyscrape1.png')}}></a>
+        </div>
+<div class="col s6">
 <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_alt</i>
+      <strong>SORT BY</strong></div>
+      <div class="collapsible-body"><span>
+      <form>
+        <select>
+            <option>1</option>
+            <option>1</option>
+            <option>1</option>
+        </select>
+      </form>
+      </span></div>
+    </li>
     {% for meal in meals %}
     <li>
       <div class="collapsible-header"><i class="material-icons">stars</i>
       <strong>{{meal.meal_name}} - {{meal.category_name}}</strong></div>
       <div class="collapsible-body"><span>
       {{meal.meal_description}} <br><br>
-      <form>
-        <input id="mealpass" placeholder="Password">
-      </form>
       <a href="{{url_for('view_meal', meal_id=meal._id)}}"class="waves-effect waves-light btn"><i class="material-icons left">restaurant_menu</i>MAKE ME</a>
-      <a id="edit-meal-btn" href="{{url_for('edit_meal', meal_id=meal._id)}}" class="waves-effect waves-light yellow darken-3 btn hidden"><i class="material-icons center">create</i></a>
-      <a id="delete-meal-btn" href="{{url_for('delete_meal', meal_id=meal._id)}}" class="waves-effect waves-light red darken-1 btn hidden"><i class="material-icons center">delete</i></a>
+      <a id="edit-meal-btn" href="{{url_for('edit_meal', meal_id=meal._id)}}" class="waves-effect waves-light yellow darken-3 btn"><i class="material-icons center">create</i></a>
+      <a id="delete-meal-btn" href="{{url_for('delete_meal', meal_id=meal._id)}}" class="waves-effect waves-light red darken-1 btn"><i class="material-icons center">delete</i></a>
       </span></div>
     </li>
-          
+ 
     {% endfor %}
 </ul>
 </div>
-<div class="col s2 advert">ADVERT</div>
+        <div class="col s3 center advert">
+            <a href="https://www.argos.co.uk/search/frying-pan/?clickOrigin=searchbar:search:term:frying+pan" target="_blank"><img src={{url_for('static', filename='images/skyscrape2.png')}}></a>
+        </div>
 </div>
 
 
