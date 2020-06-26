@@ -65,6 +65,43 @@ def delete_meal(meal_id):
     mongo.db.meals.remove({'_id': ObjectId(meal_id)})
     return redirect(url_for('get_meals'))
 
+@app.route('/sort_by_indian')
+def sort_by_indian():
+    return render_template('indian.html', meals=mongo.db.meals.find())
+
+@app.route('/sort_by_american')
+def sort_by_american():
+    return render_template('american.html', meals=mongo.db.meals.find())
+
+@app.route('/sort_by_asian')
+def sort_by_asian():
+    return render_template('asian.html', meals=mongo.db.meals.find())
+
+@app.route('/sort_by_british')
+def sort_by_british():
+    return render_template('british.html', meals=mongo.db.meals.find())
+
+@app.route('/sort_by_italian')
+def sort_by_italian():
+    return render_template('italian.html', meals=mongo.db.meals.find())
+
+@app.route('/sort_by_deserts')
+def sort_by_deserts():
+    return render_template('deserts.html', meals=mongo.db.meals.find())
+
+@app.route('/sort_by_middle_eastern')
+def sort_by_middle_eastern():
+    return render_template('middle-eastern.html', meals=mongo.db.meals.find())
+
+@app.route('/sort_by_french')
+def sort_by_french():
+    return render_template('french.html', meals=mongo.db.meals.find())
+
+@app.route('/sort_by_african')
+def sort_by_african():
+    return render_template('african.html', meals=mongo.db.meals.find())
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
