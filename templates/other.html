@@ -48,7 +48,7 @@
       </div>
     </li>
 
-    {% for meal in meals if meal.category_name == "Asian" %}
+    {% for meal in meals if meal.category_name is not defined  %}
     <li>
       <div class="collapsible-header"><i class="material-icons">stars</i>
       <strong>{{meal.meal_name}} - {{meal.category_name}}</strong></div>

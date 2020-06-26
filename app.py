@@ -43,6 +43,13 @@ def edit_meal(meal_id):
     all_categories = mongo.db.categories.find()
     return render_template('editmeal.html', meal=the_meal, categories=all_categories)
 
+@app.route('/meal/copy/<meal_id>')
+def copy_meal(meal_id):
+    the_meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('copymeal.html', meal=the_meal, categories=all_categories)
+
+
 
 @app.route('/meal/update/<meal_id>', methods=["POST"])
 def update_meal(meal_id):
@@ -106,6 +113,10 @@ def sort_by_french():
 @app.route('/filter/african')
 def sort_by_african():
     return render_template('african.html', meals=mongo.db.meals.find())
+
+@app.route('/filter/other')
+def sort_by_other():
+    return render_template('other.html', meals=mongo.db.meals.find())
 
 
 
