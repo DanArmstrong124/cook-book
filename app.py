@@ -77,7 +77,7 @@ def sort_by_american():
 def sort_by_asian():
     return render_template('asian.html', meals=mongo.db.meals.find())
 
-@app.route('/sort_by_british')
+@app.route('/filter/british')
 def sort_by_british():
     return render_template('british.html', meals=mongo.db.meals.find())
 
