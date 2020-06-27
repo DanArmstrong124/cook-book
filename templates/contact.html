@@ -1,5 +1,115 @@
 {% extends 'main.html' %} {% block content %}
 
+<div class="row card-panel">
+    <h2 class="center col s12">FAQ</h2>
+    <div class="col s12 desc">
+    <ul class="collapsible">
+        <li class="hoverable">
+        <div class="collapsible-header">
+        <h5 class="center"><strong>How do I add a meal?</strong></h5>
+        </div>
+        <div class="collapsible-body">
+        To add a meal, you must fill in the form through this link <a class="tdnone" href="{{url_for('add_meals')}}">HERE</a>. You can also find the Add Meal button at the top of every page and if on a mobile device or tablet, through the 'Burger' button (3 Horizontal Lines).
+        </div>
+        </li>
+        <li class="hoverable">
+        <div class="collapsible-header">
+        <h5><strong>How do I edit a meal?</strong></h5>
+        </div>
+        <div class="collapsible-body">
+        You can press any meal on the <a class="tdnone" href="{{url_for('get_meals')}}">HOME</a> page, this will show you a short description of the meal with a button (Orange, Pen Symbol), press this button to edit and save the meal under a new name/same name.
+        </div>
+        </li>
+        <li class="hoverable">
+        <div class="collapsible-header">
+        <h5><strong>How do I delete a meal?</strong></h5>
+        </div>
+        <div class="collapsible-body">
+        You can press any meal on the <a class="tdnone" href="{{url_for('get_meals')}}">HOME</a> page, this will show you a short description of the meal with a button (Red, Bin Symbol), press this button and you will be taken to another page of which you can confirm the deletion of the meal.
+        </div>
+        </li>
+        <li class="hoverable">
+        <div class="collapsible-header">
+        <h5><strong>Can I include brand names in my meals?</strong></h5>
+        </div>
+        <div class="collapsible-body">
+        You can choose to use brand names when submitting a meal, however please attempt to avoid the use of any Trademarked recipe titles.
+        </div>
+        </li>
+        <li class="hoverable">
+        <div class="collapsible-header">
+        <h5><strong>Can I include recipes from newspapers etc?</strong></h5>
+        </div>
+        <div class="collapsible-body">
+        Yes you can, so long as the recipe is not Trademarked.
+        </div>
+        </li>
+        <li class="hoverable">
+        <div class="collapsible-header">
+        <h5><strong>Will you be editing our recipes?</strong></h5>
+        </div>
+        <div class="collapsible-body">
+        No, we will not interfere unless your recipe name etc, contains profanity, hate-speech, Trademarked titles or any obvious errors.
+        </div>
+        </li>
+    </ul>
+    </div>
+</div>
 
+
+<div class="row card-panel">
+    <form action="https://formspree.io/myyndjrw" id="contact-form" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="first_name" name="first_name" type="text" class="validate" required>
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="last_name" name="last_name" type="text" class="validate" required>
+          <label for="last_name">Last Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">call</i>
+          <input id="phone_number" name="phone_number" type="text" class="validate">
+          <label for="phone_number">Phone Number</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">mail</i>
+          <input id="email_address" name="email_address" type="text" class="validate" required>
+          <label for="email_address">Email Address</label>
+        </div>
+                <div class="input-field col s6">
+          <i class="material-icons prefix">live_help</i>
+          <select name="reason" id="reason" required>
+            <option disabled selected>Select One</option>
+            <option>Adding Meals</option>
+            <option>Editing Meals</option>
+            <option>Deleting Meals</option>
+            <option>Viewing Meals</option>
+            <option>Advertisement</option>
+            <option>Other</option>
+          </select>
+          <label for="reason">Reason</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">add</i>
+          <input id="other_reason" name="other_reason" type="text" class="validate">
+          <label for="other_reason">If Other Please Specify</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">rate_review</i>
+          <textarea id="contact_message" name="contact_message" type="text" class="validate materialize-textarea"\ required></textarea>
+          <label for="contact_message">Message</label>
+        </div>
+      </div>
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit">Send Message
+            <i class="material-icons right">thumb_up</i>
+            </button>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

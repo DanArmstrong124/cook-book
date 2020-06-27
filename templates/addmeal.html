@@ -1,8 +1,6 @@
 {% extends 'main.html' %} {% block content %}
 
-<h3 class="center">Add a yummy meal!</h3>
-
-<div class="row">
+<div class="row card-panel">
     <form action="{{ url_for('insert_meal') }}" method="POST" class="col s12">
       <div class="row">
         <div class="input-field col s3">
