@@ -1,0 +1,37 @@
+{% extends 'main.html' %} {% block content %}
+
+<div class="row card-panel hoverable">
+    <h2 class="center col s12"><i class="material-icons">star</i>Our Mission<i class="material-icons">star</i></h2>
+    <div class="col s12 desc">
+    <h4>Our mission is to have a mission</h4>
+    </div>
+</div>
+
+<div class="row card-panel hoverable">
+    <h2 class="center col s12"><i class="material-icons">star</i>Our Vision<i class="material-icons">star</i></h2>
+    <div class="col s12 desc">
+    <h4>Our vision is to have a vision</h4>
+    </div>
+</div>
+
+<div class="row card-panel hoverable">
+    <h2 class="center col s12"><i class="material-icons">star</i>Our Values<i class="material-icons">star</i></h2>
+    <div class="col s12 desc">
+    <h4>Our value is to have a value</h4>
+    </div>
+</div>
+
+<div id="dan" class="row card-panel hoverable">
+    <h2 class="center col s12">Meet the Chef</h2>
+    <div class="col s4 image center">
+    <img src="{{url_for('static', filename='/images/gr.jpg')}}" alt="The Chef Dan Ramsey">
+    </div>
+    <div class="col s8 desc">
+        <h5>Dan is a British chef, restaurateur, writer and television personality.
+        <br><br>His restaurants have been awarded 16 Michelin stars in total and currently hold a total of seven. His signature restaurant, Restaurant Dan in Chelsea, London, has held three Michelin stars since 2001. After rising to fame on the British television miniseries Boiling Point in 1998
+        <br><br>Dan had become one of the best-known and most influential chefs in the UK by 2004
+        </h5>
+        <p class="quote">"Nothing beats a good maccies" - Dan</p>
+    </div>
+</div>
+{% endblock %}
