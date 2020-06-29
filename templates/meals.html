@@ -18,12 +18,16 @@
             <a href="https://www.argos.co.uk/search/spoon/?clickOrigin=searchbar:home:term:spoon" target="_blank"><img src={{url_for('static', filename='images/skyscrape1.png')}}></a>
         </div>
 <div class="col s6 card-panel">
+<div class="add-btn hide-on-small center">
+<a class="btn-floating btn-large z-depth-5 waves-effect waves-light green lighten-1" href="{{url_for("add_meals")}}"><i class="material-icons">add</i></a>
+</div>
 <ul class="collapsible">
     <li class="hoverable">
       <div class="collapsible-header"><i class="material-icons">filter_alt</i>
       <strong id="meal_link">Sort By - All</strong></div>
       <div class="collapsible-body card-panel center">
       <span>
+      <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
       <a href="{{url_for('sort_by_african')}}"class="waves-effect waves-light red lighten-1 sort-btn btn">AFRICAN</a>
       </span>
       <span>
