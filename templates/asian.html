@@ -9,7 +9,7 @@
         <div class="col s3 center advert">
             <a href="https://www.argos.co.uk/search/spoon/?clickOrigin=searchbar:home:term:spoon" target="_blank"><img src={{url_for('static', filename='images/skyscrape1.png')}}></a>
         </div>
-<div class="col s6">
+<div class="col s6 card-panel">
 <ul class="collapsible">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_alt</i>
@@ -52,7 +52,7 @@
     </li>
 
     {% for meal in meals if meal.category_name == "Asian" %}
-    <li>
+    <li class="hoverable faq-spacing">
       <div class="collapsible-header"><i class="material-icons">stars</i>
       <strong>{{meal.meal_name}} - {{meal.category_name}}</strong></div>
       <div class="collapsible-body"><span>
