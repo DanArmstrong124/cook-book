@@ -5,7 +5,7 @@
       <div class="row">
         <div class="input-field col s3">
           <i class="material-icons prefix">menu_book</i>
-          <input id="meal_name" name="meal_name" type="text" class="validate" value="{{meal.meal_name}}">
+          <input id="meal_name" name="meal_name" type="text" class="validate" value="{{meal.meal_name}}" required>
           <label for="meal_name">Meal Name</label>
         </div>
         <div class="col s3" style="margin-top: 14px;">
@@ -22,27 +22,27 @@
         </div>
         <div class="input-field col s3">
           <i class="material-icons prefix">fireplace</i>
-          <input id="meal_temp" name="meal_temp" type="text" class="validate" value="{{meal.meal_temp}}">
+          <input id="meal_temp" name="meal_temp" type="text" class="validate" value="{{meal.meal_temp}}" required>
           <label for="meal_temp">Temperature</label>
         </div>
         <div class="input-field col s3">
           <i class="material-icons prefix">watch_later</i>
-          <input id="meal_time" name="meal_time" type="text" class="validate" value="{{meal.meal_time}}">
+          <input id="meal_time" name="meal_time" type="text" class="validate" value="{{meal.meal_time}}" required>
           <label for="meal_time">Time Needed</label>
         </div>
         <div class="input-field col s12">
           <i class="material-icons prefix">rate_review</i>
-          <textarea id="meal_description" name="meal_description" type="text" class="validate materialize-textarea"\>{{meal.meal_description}}</textarea>
+          <textarea id="meal_description" name="meal_description" type="text" class="validate materialize-textarea"\ required>{{meal.meal_description}}</textarea>
           <label for="meal_description">Meal Description</label>
         </div>
         <div class="input-field col s12">
           <i class="material-icons prefix">local_pizza</i>
-          <textarea id="meal_ingredients" name="meal_ingredients" type="text" class="validate materialize-textarea"\>{{meal.meal_ingredients}}</textarea>
+          <textarea id="meal_ingredients" name="meal_ingredients" type="text" class="validate materialize-textarea"\ required>{{meal.meal_ingredients}}</textarea>
           <label for="meal_ingredients">Meal Ingredients</label>
         </div>
         <div class="input-field col s12">
           <i class="material-icons prefix">info</i>
-          <textarea id="meal_instructions" name="meal_instructions" type="text" class="validate materialize-textarea"\>{{meal.meal_instructions}}</textarea>
+          <textarea id="meal_instructions" name="meal_instructions" type="text" class="validate materialize-textarea"\ required>{{meal.meal_instructions}}</textarea>
           <label for="meal_instructions">Meal Instructions</label>
         </div>
         <div class="input-field col s12">
