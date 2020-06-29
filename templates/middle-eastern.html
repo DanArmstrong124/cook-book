@@ -1,8 +1,16 @@
 {% extends 'main.html' %}
 {% block content %}
-<div class="row">
+<div class="row card-panel hoverable">
     <div class="col s12 homeheader center">
-        HOME HEADER
+        <strong><h3>Welcome to Dan's Delicious Dishes</h3>
+        <h5>The leading cookbook for all your naughty needs and healthy deeds</h5>
+        <br>
+        <p>We strive to provide you with the 10/10 recipes, not just from the top chefs such as <a class="tdnone" href="{{url_for('about_page')}}#dan">Dan</a> himself.
+         <br>But also from the hunger crazed individuals within our community.</p>
+         <p>You will find our site useful to find yourself that next scrumptious lunch or the dinner that puts you into hibernation.<br>
+         Please have a look at <a class="tdnone" href="#meal_link">our menu</a>, <a class="tdnone" href="{{url_for('add_meals')}}">add a meal</a> yourself and read more <a class="tdnone" href="{{url_for('about_page')}}">about us</a>!</p>
+        <p><a class="tdnone" href="{{url_for('contact_page')}}">Have an enquiry?</a></p>
+        </strong>
     </div>
 </div>
 <div class="row">
