@@ -118,32 +118,75 @@ For any scenarios that have not been automated, test the user stories manually a
     3. Try to submit the form with all inputs valid and verify that a success message appears.
     4. Press 'Return to Original Site'
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+2. Add Meal form:
+    1. Go to the "Add Meal" page
+    2. Try to submit the empty form and verify that an error message about the required fields appears
+    3. Try to submit the form with all inputs valid.
+    4. Look for your meal at the bottom of the list.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+3. Edit Meal form:
+    1. Go to the "Edit Meal" page
+    2. Try to submit the empty form and verify that an error message about the required fields appears
+    3. Try to submit the form with all inputs valid.
+    4. Look for your meal at the bottom of the list.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+4. Sort By buttons:
+    1. Go to the "Home" page
+    2. Press "Sort By"
+    3. Choose an option
+    4. If empty choose a different filter OR add a meal with that filter and restart through steps 1-3.
+    5. Verify that your meal is there.
+
+5. Delete meal:
+    1. Go to the "Home" page
+    2. Select a meal
+    3. Press the red button with the trash icon.
+    4. Press yes once redirected.
+    5. Verify the meal is no longer on the list.
+
+6. View meal:
+    1. Go to the "Home" page
+    2. Select a meal
+    3. Press the green "MAKE ME" button
+    4. Verify the meal name and details once redirected.
+
+7. Home page links:
+    1. Go to the "Home" page
+    2. In the mini about at the top of the "Home Page" press each link.
+    3. Verify they take you to where you would expect.
+
+8. Drop Downs:
+    1. Go to the "Contact" page
+    2. Under "FAQ" press/click a questions
+    3. Verify it drops down with the answers
+    4. If there is a link, verify link takes you to where you would expect.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+I have deployed this project to Heroku.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+Throughout my project I have been using git and heroku to ensure that I have a backup of the files as well as deployment.
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+My GitHub contains all the files, and the Heroku contains all of the files including the Procfile of which pushes it to run the application app.py to make the site live.
+
+My values that I had to add consist of IP, PORT, MONGO_URI & MONGO_DBNAME.
+
+I have used a .gitignore to ensure that certain files are not for public use as they may contain DB information or anything else that does not concern the public eye.
+
+When I need a quick preview, through GitPod I deploy my preview by typing "Python3 app.py" into the terminal and following the connection into an incognito browser after making the port public.
 
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The chef photo contains myself and a [Google Images](https://images.google.com) of [Gordon Ramsay](https://www.google.com/search?q=gordon+ramsay&sxsrf=ALeKk01C4pp0TILt_xG0WYf6k1wdJORxfQ:1593440424326&source=lnms&tbm=isch&sa=X&ved=2ahUKEwidt9mTnKfqAhWdQkEAHa2yBI8Q_AUoAnoECCEQBA&biw=1600&bih=757#imgrc=UBi_exyulk5kgM)
 
 ### Media
-- The photos used in this site were obtained from ...
+- The advert photos were created by myself.
+- The chef photo was photoshopped by myself, containing myself and [Gordon Ramsay](https://www.google.com/search?q=gordon+ramsay&sxsrf=ALeKk01C4pp0TILt_xG0WYf6k1wdJORxfQ:1593440424326&source=lnms&tbm=isch&sa=X&ved=2ahUKEwidt9mTnKfqAhWdQkEAHa2yBI8Q_AUoAnoECCEQBA&biw=1600&bih=757#imgrc=UBi_exyulk5kgM)
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from Code Institutes examples.
+- I received inspiration of what was needed for a business value etc, via [Google](https://google.com) and proceeded to create my own.
+- The adverts redirect to [Argos](https://argos.com).
