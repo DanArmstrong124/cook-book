@@ -54,6 +54,7 @@ The wireframes that I created using [Balsamiq](https://balsamiq.com/wireframes/)
 
 - Sorting Pages: The pages linked into the main.html using Jinja and Flask to sort the listing for the user.
 - - African, American, British Etc.
+- - Contain the Side of Page Adverts.
 
 ### Features Left to Implement
 - NONE
