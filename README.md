@@ -181,6 +181,7 @@ When I need a quick preview, through GitPod I deploy my preview by typing "Pytho
 
 ### Content
 - The chef photo contains myself and a [Google Images](https://images.google.com) of [Gordon Ramsay](https://www.google.com/search?q=gordon+ramsay&sxsrf=ALeKk01C4pp0TILt_xG0WYf6k1wdJORxfQ:1593440424326&source=lnms&tbm=isch&sa=X&ved=2ahUKEwidt9mTnKfqAhWdQkEAHa2yBI8Q_AUoAnoECCEQBA&biw=1600&bih=757#imgrc=UBi_exyulk5kgM)
+- The icons used are from [Materialize Icons](https://material.io/resources/icons/?style=baseline).
 
 ### Media
 - The advert photos were created by myself.
