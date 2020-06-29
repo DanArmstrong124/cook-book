@@ -9,6 +9,7 @@
     <body>
         <header>
             <nav>
+            <!--Navigation Bar-->
                 <div class="nav-wrapper">
                 <a href="{{url_for('get_meals')}}" class="brand-logo">Dan's Delicious Dishes</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -28,11 +29,12 @@
             </nav>
         </header>
 
-        
+        <!--Content from other pages-->
         {% block content %}
         {% endblock %}
 
 <footer class="page-footer">
+        <!--Footer-->
           <div class="container">
             <div class="row">
               <div class="col s12 center">
