@@ -17,3 +17,7 @@ body{
     color: darkgrey;
     font-style: italic;
 }
+
+.sort-btn{
+    width:250px !important;
+}
