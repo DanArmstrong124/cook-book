@@ -23,6 +23,11 @@ body{
     margin:5px !important;
 }
 
+.meal-btn{
+    width: 150px !important;
+    margin: 5px;
+}
+
 .faq-spacing{
     margin: 5px;
 }
