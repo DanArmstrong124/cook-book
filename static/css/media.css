@@ -1,47 +1,50 @@
-@media only screen and (min-width:900px) {
-    body{
-      font-size: 21px !important;
-    }
+@media only screen and (max-width:992px) {
     .mlist a{
-        font-size: 18px !important;
+        font-size: 28px !important;
     }
-    .homeheader h3{
-        font-size: 26px;
+    nav{
+        height: 135px !important;
     }
-    .homeheader h5{
-        font-size: 22px;
-    }
-}
-
-@media only screen and (min-width:600px) and (max-width:899px) {
-    body{
-      font-size: 26px !important;
-    }
-    .mlist a{
-        font-size: 26px !important;
-    }
-    .homeheader h3{
-        font-size: 36px;
-    }
-    .homeheader h5{
-        font-size: 32px;
-    }
-}
-
-@media only screen and (min-width: 500px) and (max-width: 599px) {
-    body{
-        font-size: 34px !important;
-    }
-    .mlist a{
-        font-size: 34px !important;
-    }
-    .homeheader h3{
-        font-size: 46px;
-    }
-    .homeheader h5{
+    nav .brand-logo{
+        margin-left: 15px;
+        margin-top: 30px;
         font-size: 40px;
     }
-    body .header .nav{
-        height: 150px !important;
+    nav .button-collapse{
+        margin-top: 20px;
+        margin-left: 48px;
+    }
+    nav .button-collapse i{
+        font-size: 50px;
+    }
+    .add-btn a{
+        font-size:25px;
+    }
+    .add-btn a i{
+        font-size: 30px;
+    }
+    .sort-btn {
+        width: 350px !important;
+        margin: 5px !important;
+        height: 72px;
+        font-size: 30px;
+        padding-top: 17px;
+    }
+    .add-form .input-field.col .prefix ~ label, .input-field.col .prefix ~ .validate ~ label{
+        font-size: 25px !important;
+    }
+
+    .add-form i .input-field .prefix{
+        font-size: 40px !important;
+    }
+
+    .add-form .select-wrapper input{
+        font-size: 20px !important;
+    }
+    .meal-submit-btn a{
+        font-size:25px;
+    }
+    .meal-submit-btn a i{
+        font-size: 30px;
     }
 }

@@ -5,6 +5,7 @@
       rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/media.css')}}">
     </head>
     <body>
         <header>
@@ -20,8 +21,8 @@
                     <li><a href="{{url_for('about_page')}}">About Us</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li class="mlist flowtext"><a href="{{url_for('get_meals')}}">Home</a></li>
-                    <li class="mlist"><a href="{{url_for('add_meals')}}"><p class="flowtext">Add Meal</p></a></li>
+                    <li class="mlist"><a href="{{url_for('get_meals')}}">Home</a></li>
+                    <li class="mlist"><a href="{{url_for('add_meals')}}">Add Meal</a></li>
                     <li class="mlist"><a href="{{url_for('contact_page')}}">Contact Us</a></li>
                     <li class="mlist"><a href="{{url_for('about_page')}}">About Us</a></li>
                 </ul>
@@ -56,7 +57,6 @@
 
 
         <script src="{{url_for('static', filename='/js/form.js')}}'"></script>
-        <script src="{{url_for('static', filename='/js/script.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script type="text/javascript">
