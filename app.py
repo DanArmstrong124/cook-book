@@ -15,6 +15,7 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo = PyMongo(app)
 
+#App Routes
 @app.route('/')
 @app.route('/meals')
 def get_meals():
@@ -50,7 +51,6 @@ def copy_meal(meal_id):
     return render_template('copymeal.html', meal=the_meal, categories=all_categories)
 
 
-
 @app.route('/meal/update/<meal_id>', methods=["POST"])
 def update_meal(meal_id):
     meals = mongo.db.meals
@@ -77,6 +77,8 @@ def delete_confirm(meal_id):
 def delete_meal(meal_id):
     mongo.db.meals.remove({'_id': ObjectId(meal_id)})
     return redirect(url_for('get_meals'))
+
+#Meal Filters
 
 @app.route('/filter/indian')
 def sort_by_indian():

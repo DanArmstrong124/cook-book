@@ -61,8 +61,6 @@ The wireframes that I created using [Balsamiq](https://balsamiq.com/wireframes/)
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
@@ -107,7 +105,9 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ## Testing
 
-I got my family and friends involved in testing the following, with the results below each test:
+To begin my testing, I created the application and would use 'Python3 app.py' to run a preview in the browser. To ensure that it was an up to date version I made the port public and ran the preview inside of an incognito window.
+
+After multiple tests we collated, I took them down and wrote them out in a simple format that others could understand. I then got my family and friends involved in testing the following, with the results below each test:
 
 1. Contact form:
     1. Go to the "Contact Us" page
@@ -173,6 +173,10 @@ I got my family and friends involved in testing the following, with the results 
     4. If there is a link, verify link takes you to where you would expect.
 
 - Result was met, user was satisfied.
+
+
+Throughout the testing from my friends and family, no bugs were met, they were able to find their way around the website without asking me how to do anything.
+I attempted to break my site by going between links and going back, to my best knowledge there isn't a single major bug that will affect the user experience.
 
 ## Deployment
 
