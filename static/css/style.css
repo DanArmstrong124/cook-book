@@ -41,6 +41,6 @@ body{
     font-size: 40px;
 }
 
-header .nav li{
+header .nav ul .nav-mobile li{
     border-bottom: 1px solid black;
 }
