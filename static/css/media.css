@@ -2,7 +2,7 @@
     body{
       font-size: 21px !important;
     }
-    nav li a{
+    .mlist a{
         font-size: 18px !important;
     }
 }
@@ -11,7 +11,7 @@
     body{
       font-size: 18px !important;
     }
-    nav li a{
+    .mlist a{
         font-size: 26px !important;
     }
 }
@@ -20,7 +20,7 @@
     body{
         font-size: 14px !important;
     }
-    nav li a{
+    .mlist a{
         font-size: 36px !important;
     }
 }

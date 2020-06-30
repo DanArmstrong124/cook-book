@@ -41,7 +41,7 @@ body{
     font-size: 40px;
 }
 
-header .nav ul .nav-mobile li a{
+.mlist{
     border-bottom: 1px solid black !important;
     margin: 5px !important;
 }
