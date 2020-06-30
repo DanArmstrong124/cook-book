@@ -107,11 +107,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+I got my family and friends involved in testing the following, with the results below each test:
 
 1. Contact form:
     1. Go to the "Contact Us" page
@@ -119,17 +115,23 @@ For any scenarios that have not been automated, test the user stories manually a
     3. Try to submit the form with all inputs valid and verify that a success message appears.
     4. Press 'Return to Original Site'
 
+- Result was met, user was satisfied.
+
 2. Add Meal form:
     1. Go to the "Add Meal" page
     2. Try to submit the empty form and verify that an error message about the required fields appears
     3. Try to submit the form with all inputs valid.
     4. Look for your meal at the bottom of the list.
 
+- Result was met, user was satisfied.
+
 3. Edit Meal form:
     1. Go to the "Edit Meal" page
     2. Try to submit the empty form and verify that an error message about the required fields appears
     3. Try to submit the form with all inputs valid.
     4. Look for your meal at the bottom of the list.
+
+- Result was met, user was satisfied.
 
 4. Sort By buttons:
     1. Go to the "Home" page
@@ -138,6 +140,8 @@ For any scenarios that have not been automated, test the user stories manually a
     4. If empty choose a different filter OR add a meal with that filter and restart through steps 1-3.
     5. Verify that your meal is there.
 
+- Result was met, user was satisfied.
+
 5. Delete meal:
     1. Go to the "Home" page
     2. Select a meal
@@ -145,22 +149,30 @@ For any scenarios that have not been automated, test the user stories manually a
     4. Press yes once redirected.
     5. Verify the meal is no longer on the list.
 
+- Result was met, user was satisfied.
+
 6. View meal:
     1. Go to the "Home" page
     2. Select a meal
     3. Press the green "MAKE ME" button
     4. Verify the meal name and details once redirected.
 
+- Result was met, user was satisfied.
+
 7. Home page links:
     1. Go to the "Home" page
     2. In the mini about at the top of the "Home Page" press each link.
     3. Verify they take you to where you would expect.
+
+- Result was met, user was satisfied.
 
 8. Drop Downs:
     1. Go to the "Contact" page
     2. Under "FAQ" press/click a questions
     3. Verify it drops down with the answers
     4. If there is a link, verify link takes you to where you would expect.
+
+- Result was met, user was satisfied.
 
 ## Deployment
 
@@ -172,9 +184,11 @@ My GitHub contains all the files, and the Heroku contains all of the files inclu
 
 My values that I had to add consist of IP, PORT, MONGO_URI & MONGO_DBNAME.
 
+The MONGO_URI and MONGO_DBNAME are found inside of an enviromental python file, of which contains "os.environ.setdefault" for both & The IP and PORT to ensure that I can then import it safely into my app.py without the chance of someone being able to access my data.
+
 I have used a .gitignore to ensure that certain files are not for public use as they may contain DB information or anything else that does not concern the public eye.
 
-When I need a quick preview, through GitPod I deploy my preview by typing "Python3 app.py" into the terminal and following the connection into an incognito browser after making the port public.
+When I need a quick preview for development, through GitPod I deploy my preview by typing "Python3 app.py" into the terminal and following the connection into an incognito browser after making the port public.
 
 
 ## Credits
