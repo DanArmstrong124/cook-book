@@ -1,5 +1,11 @@
-@media only screen and (min-width:0px) {
-  html{
-      font-size: 21px !important;
-  }
+@media only screen and (min-width:600px) {
+    html{
+      font-size: 18px !important;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    html{
+        font-size: 14px !important;
+    }
 }
