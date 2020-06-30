@@ -40,3 +40,7 @@ body{
 .menu-burger{
     font-size: 40px;
 }
+
+header .nav li{
+    border-bottom: 1px solid black;
+}
