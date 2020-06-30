@@ -23,14 +23,10 @@
     .add-btn a i{
         font-size: 30px;
     }
-    .make-meal-btn a,
-    #edit-meal-btn a,
-    #delete-meal-btn a{
+    .make-meal-btn a{
         font-size:25px;
     }
-    .make-meal-btn a i,
-    #edit-meal-btn a i,
-    #delete-meal-btn a i{
+    .make-meal-btn a i{
         font-size: 30px;
     }
     .sort-btn {
