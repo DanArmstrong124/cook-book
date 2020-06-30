@@ -68,7 +68,7 @@
       <div class="collapsible-body card-panel"><span>
       {{meal.meal_description}} <br><br>
       <div class="center">
-      <a class="make-meal-btn" href="{{url_for('view_meal', meal_id=meal._id)}}"class="waves-effect meal-btn waves-light btn"><i class="material-icons left">restaurant_menu</i>MAKE ME</a>
+      <a href="{{url_for('view_meal', meal_id=meal._id)}}"class="waves-effect meal-btn waves-light btn"><i class="material-icons left">restaurant_menu</i>MAKE ME</a>
       <a id="edit-meal-btn" href="{{url_for('edit_meal', meal_id=meal._id)}}" class="waves-effect meal-btn waves-light yellow darken-3 btn"><i class="material-icons left">create</i>EDIT ME</a>
       <a id="delete-meal-btn" href="{{url_for('delete_confirm', meal_id=meal._id)}}" class="waves-effect meal-btn waves-light red darken-1 btn"><i class="material-icons left">delete</i>DELETE ME</a>
       </div>
