@@ -178,6 +178,8 @@ After multiple tests we collated, I took them down and wrote them out in a simpl
 Throughout the testing from my friends and family, no bugs were met, they were able to find their way around the website without asking me how to do anything.
 I attempted to break my site by going between links and going back, to my best knowledge there isn't a single major bug that will affect the user experience.
 
+I tested the responsive design myself and with friends and family and the feedback given was that you can read all text clearly, buttons are not a struggle to find and everything sits nicely.
+
 ## Deployment
 
 I have deployed this project to Heroku.

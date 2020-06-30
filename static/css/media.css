@@ -26,9 +26,9 @@
     .sort-btn {
         width: 350px !important;
         margin: 5px !important;
-        height: 72px;
-        font-size: 30px;
-        padding-top: 17px;
+        height: 55px;
+        font-size: 25px;
+        padding-top: 10px;
     }
     .add-form .input-field.col .prefix ~ label, .input-field.col .prefix ~ .validate ~ label{
         font-size: 25px !important;
