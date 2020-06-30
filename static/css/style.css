@@ -41,6 +41,7 @@ body{
     font-size: 40px;
 }
 
-header .nav ul .nav-mobile li{
-    border-bottom: 1px solid black;
+header .nav ul .nav-mobile li a{
+    border-bottom: 1px solid black !important;
+    margin: 5px !important;
 }
