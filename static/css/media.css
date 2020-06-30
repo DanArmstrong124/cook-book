@@ -2,16 +2,25 @@
     body{
       font-size: 21px !important;
     }
+    nav li {
+        font-size: 26px !important;
+    }
 }
 
 @media only screen and (max-width:600px) {
     body{
       font-size: 18px !important;
     }
+    nav li {
+        font-size: 22px !important;
+    }
 }
 
 @media only screen and (max-width: 900px) {
     body{
         font-size: 14px !important;
+    }
+    nav li {
+        font-size: 18px !important;
     }
 }
