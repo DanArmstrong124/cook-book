@@ -35,3 +35,7 @@ body{
 .add-btn{
     margin: 10px;
 }
+
+header i{
+    font-size: 40px;
+}
