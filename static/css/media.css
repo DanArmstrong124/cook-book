@@ -1,4 +1,4 @@
-@media only screen and (min-width:500) {
+@media only screen and (min-width:900px) {
     body{
       font-size: 21px !important;
     }
@@ -13,7 +13,7 @@
     }
 }
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:600px) and (max-width:899px) {
     body{
       font-size: 26px !important;
     }
@@ -28,7 +28,7 @@
     }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 500px) and (max-width: 599px) {
     body{
         font-size: 34px !important;
     }
@@ -40,5 +40,8 @@
     }
     .homeheader h5{
         font-size: 40px;
+    }
+    body .header .nav{
+        height: 150px !important;
     }
 }
